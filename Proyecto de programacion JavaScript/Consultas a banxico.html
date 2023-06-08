@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consulta a API de Banxico</title>
+    <script src="Jquery.js"></script>
+    <script src="ApiBanxico.js"></script>
+</head>
+<body>
+    <h1>Consulta a API de Banxico</h1>
+
+    <label for="fechaInicio">Fecha de inicio:</label>
+    <input type="date" id="fechaInicio">
+
+    <label for="fechaFin">Fecha de fin:</label>
+    <input type="date" id="fechaFin">
+
+    <button onclick="realizarConsulta()">Realizar consulta</button>
+
+    <div id="resultado"></div>
+</body>
+</html>

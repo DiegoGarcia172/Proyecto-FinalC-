@@ -1,0 +1,43 @@
+.my-button.color-change {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.my-button.color-change::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.my-button.color-change:hover {
+  background-color: #FF4081;
+}
+
+@keyframes glowing {
+  0% { text-shadow: 0 0 5px #fff; }
+  50% { text-shadow: 0 0 20px #FF0000; }
+  100% { text-shadow: 0 0 5px #fff; }
+}
+
+.animated-text {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  color: #000;
+  animation: glowing 2s infinite;
+}

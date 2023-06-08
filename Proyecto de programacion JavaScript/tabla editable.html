@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSV to XLSX</title>
+    <script src="xlsx.js"></script>
+    <script src="pdf.js"></script>
+    <script src="FuncionesTE.js"></script>
+    <link rel="stylesheet" type="text/css" href="BotonTablaE.css">
+</head>
+<body>
+    <input type="file" id="csvFile">
+    <div id="tableContainer"></div>
+    <button class="my-button scale" onclick="exportToXLSX()">Exportar a XLSX</button>
+    <button class="my-button scale" onclick="exportToPDF()">Exportar a PDF</button>
+    <button class="my-button scale" onclick="exportToCSV()">Exportar a CSV</button>
+</body>
+<script>
+    var fileInput = document.getElementById('csvFile');
+    var tableContainer = document.getElementById('tableContainer');
+    var data = [];
+    fileInput.addEventListener('change', function(e) {
+    var file = e.target.files[0];
+    var reader = new FileReader();
+    reader.onload = function(e) {
+    var contents = e.target.result;
+    data = CSVToArray(contents);
+    createTable();
+    };
+    reader.readAsText(file);
+    });
+</script>
+</html>

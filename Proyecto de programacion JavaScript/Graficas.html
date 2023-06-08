@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cargar archivo CSV y crear gráfica</title>
+  <script src="Chart.js"></script>
+  <script src="GraficasCD.js"></script>
+</head>
+<body>
+  <input type="file" id="csvFileInput" accept=".csv">
+  <canvas id="chartCanvas"></canvas>
+  <script>
+   document.getElementById('csvFileInput').addEventListener('change', handleFileSelect, false);
+  </script>
+</body>
+</html>
